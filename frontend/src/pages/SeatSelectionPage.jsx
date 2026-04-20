@@ -15,7 +15,6 @@ const SeatSelectionPage = () => {
   const navigate = useNavigate();
   const { bookingData, setSeatData } = useBooking();
 
-  const [seats, setSeats] = useState([]);
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [loading, setLoading] = useState(true);
   const [seatsByRow, setSeatsByRow] = useState({});
@@ -38,7 +37,6 @@ const SeatSelectionPage = () => {
         });
 
         const seatData = response.data.data;
-        setSeats(seatData.seats);
         setSeatsByRow(seatData.seatsByRow);
       } catch (error) {
         console.error('Error fetching seats:', error);
@@ -48,7 +46,7 @@ const SeatSelectionPage = () => {
     };
 
     fetchSeats();
-  }, [bookingData]);
+  }, [bookingData, navigate]);
 
   // Handle seat selection
   const handleSeatClick = (seat) => {

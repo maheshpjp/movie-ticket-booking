@@ -17,7 +17,6 @@ const HomePage = () => {
   const [nowShowingMovies, setNowShowingMovies] = useState([]);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState('');
 
   // Fetch movies on mount
   useEffect(() => {

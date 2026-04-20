@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useParams, useNavigate } from 'react-router-dom';
-import { FiArrowLeft, FiCalendar, FiClock, FiStar } from 'react-icons/fi';
-import Button from '../components/Button';
+import { FiArrowLeft, FiClock, FiStar } from 'react-icons/fi';
 import Loader from '../components/Loader';
 import TheaterCard from '../components/TheaterCard';
 import { movieAPI, theaterAPI } from '../services/api';

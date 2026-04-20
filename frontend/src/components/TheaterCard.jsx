@@ -1,13 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from './Button';
-import { useNavigate } from 'react-router-dom';
 
 /**
  * Theater Selection Card
  */
 const TheaterCard = ({ theater, onSelectShow }) => {
-  const navigate = useNavigate();
 
   return (
     <motion.div
